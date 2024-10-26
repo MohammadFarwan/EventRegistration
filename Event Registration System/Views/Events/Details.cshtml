@@ -1,0 +1,14 @@
+﻿@model Event
+
+<h2>Event Details</h2>
+
+<div>
+    <p><strong>Title:</strong> @Model.Title</p>
+    <p><strong>Date:</strong> @Model.Date.ToString("MM/dd/yyyy")</p>
+    <p><strong>Description:</strong> @Model.Description</p>
+    <p><strong>Capacity:</strong> @Model.Capacity</p>
+
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
